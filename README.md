@@ -1,2 +1,2 @@
 # RepoKita
-Repositori Yasmin dan Zahra Nura
+Website Portofolio Personal Branding untuk kita sebagai mahasiswa teknik informatika
