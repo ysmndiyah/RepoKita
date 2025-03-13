@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Ys.</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="bx bx-menu"></i>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="https://github.com/Nuthfih/pronlen.github.io">Project</a>
+            <a href="https://wa.me/+622245870175">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="about">
+        <h1 class="typing-effect"></h1>
+        <p>Perkenalkan, nama saya <b>'Al Yasmin Assa'diyah'</b>, biasa dipanggil Mimin 😆.</p>
+        <p>Saya adalah mahasiswa dari <strong>Universitas Logistik dan Bisnis Internasional</strong> yang ada di Bandung, jurusan <strong>D4-Teknik Informatika</strong>.</p>
+        <p class="salutation">Cukup sekian, salam <strong>TEKNIK!</strong>⚡</p>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Perkenalkan, nama saya 'Al Yasmin Assa'diyah', biasa dipanggil Min.";
+            const typingElement = document.querySelector(".typing-effect");
+            let index = 0;
+            
+            function typeText() {
+                if (index < text.length) {
+                    typingElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 100);
+                }
+            }
+            typeText();
+            
+            const menuToggle = document.getElementById("menu-toggle");
+            const navbar = document.getElementById("navbar");
+            
+            menuToggle.addEventListener("click", function () {
+                navbar.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
  //Responsive Personal Branding Website
 
 Deskripsi
-Proyek ini adalah sebuah situs web personal branding yang responsif, dirancang untuk menampilkan informasi tentang seorang IT Implementor. Situs ini memiliki tata letak yang modern, animasi yang halus, serta navigasi yang mudah diakses.
+Proyek ini adalah sebuah situs web personal branding yang responsif, dirancang untuk menampilkan informasi tentang seorang Mahasiswa IT. Situs ini memiliki tata letak yang modern, animasi yang halus, serta navigasi yang mudah diakses.
 
 //Fitur Utama
 - **Header Navigasi Tetap**: Navigasi tetap di bagian atas dengan efek hover.
