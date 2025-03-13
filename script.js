@@ -1,22 +1,85 @@
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    document.getElementById('navbar').classList.toggle('active');
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "Al Yasmin Assa'diyah"; 
-    const typingElement = document.querySelector(".typing-effect");
-    let index = 0;
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
 
-    function typeText() {
-        if (index < text.length) {
-            typingElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeText, 100); 
-        }
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+            console.log("Menu toggle clicked, navbar active:", navbar.classList.contains('active'));
+        });
     }
 
-    typeText();
+    const typingElement = document.querySelector(".typing-effect");
+    if (typingElement) {
+        const text = "Al Yasmin Assa'diyah"; 
+        let index = 0;
 
-   
-    document.querySelector(".fade-in").style.animationDelay = "2s";
+        function typeText() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            }
+        }
+
+        typeText();
+    }
+
+    const fadeInElement = document.querySelector(".fade-in");
+    if (fadeInElement) {
+        fadeInElement.style.animationDelay = "2s";
+    }
 });
+
+const skillIcons = document.querySelectorAll(".skills-icons i");
+skillIcons.forEach(icon => {
+    icon.addEventListener("mouseover", () => {
+        icon.style.transform = "scale(1.3)";
+        icon.style.color = "#ffaa00";
+    });
+
+    icon.addEventListener("mouseleave", () => {
+        icon.style.transform = "scale(1)";
+        icon.style.color = "#00aaff";
+    });
+});
+
+
+const responseFunction = ({ status, data }) => {
+    console.log("Response received. Status:", status);
+
+    if (status === 200) {
+        console.log("%cSuccess:", "color: green; font-weight: bold;", "Berhasil");
+    } else if (status === 409) {
+        console.error("%cConflict Error:", "color: red; font-weight: bold;", data);
+    } else {
+        console.error("%cGeneric Error:", "color: orange; font-weight: bold;", data);
+    }
+};
+
+function sendTrackingRequest() {
+    console.log("Sending tracking request...");
+
+    
+    const lastSent = localStorage.getItem("trackingSentAt");
+    const now = Date.now();
+
+    if (lastSent && now - lastSent < 24 * 60 * 60 * 1000) {
+        console.log("%cData sudah dikirim dalam 24 jam terakhir, tidak mengirim ulang.", "color: orange;");
+        return;
+    }
+
+    
+    setTimeout(() => {
+        const simulatedResponse = { status: 409, data: "Duplicate entry detected" };
+
+        if (simulatedResponse.status === 200) {
+            localStorage.setItem("trackingSentAt", now); 
+        }
+
+        responseFunction(simulatedResponse);
+    }, 1000);
+}
+
+
+sendTrackingRequest();
