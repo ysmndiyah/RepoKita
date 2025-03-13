@@ -1,8 +1,9 @@
+/* Reset dan Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -53,7 +55,7 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-/* Efek garis bawah */
+/* Efek garis bawah pada navbar */
 .navbar a::after {
     content: "";
     position: absolute;
@@ -71,6 +73,7 @@ body {
     transform: scaleX(1);
 }
 
+/* Home Section */
 .home {
     min-height: 100vh;
     display: flex;
@@ -84,41 +87,6 @@ body {
     max-width: 600px;
 }
 
-.home-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    max-width: 350px;
-}
-
-.home-img img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    border: 4px solid goldenrod;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-    transition: transform 0.3s ease-in-out;
-}
-
-.home-img img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home-img {
-        margin-top: 20px;
-    }
-}
-
-.home-content {
-    max-width: 600px;
-}
-
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
@@ -126,9 +94,9 @@ body {
 }
 
 .home-content h3 {
-     font-size: 32px;
-     font-weight: 700;
-     color: goldenrod;
+    font-size: 32px;
+    font-weight: 700;
+    color: goldenrod;
 }
 
 .home-content p {
@@ -136,6 +104,30 @@ body {
     margin: 20px 0 40px;
 }
 
+/* Home Image */
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 250px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.home-img img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 4px solid goldenrod;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Tombol Aksi */
 .btn-box {
     display: flex;
     gap: 15px;
@@ -156,6 +148,7 @@ body {
     background: orange;
 }
 
+/* Ikon Sosial Media */
 .home-sci {
     position: absolute;
     bottom: 40px;
@@ -213,9 +206,7 @@ body {
     .navbar.active {
         display: flex;
     }
-}
 
-@media (max-width: 768px) {
     .home {
         flex-direction: column;
         text-align: center;
@@ -223,8 +214,9 @@ body {
 
     .home-img {
         margin-top: 20px;
+        max-width: 200px;
     }
-  
+    
     .home-content h1 {
         font-size: 40px;
     }
