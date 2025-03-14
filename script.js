@@ -60,7 +60,6 @@ const responseFunction = ({ status, data }) => {
 function sendTrackingRequest() {
     console.log("Sending tracking request...");
 
-    
     const lastSent = localStorage.getItem("trackingSentAt");
     const now = Date.now();
 
@@ -69,18 +68,47 @@ function sendTrackingRequest() {
         return;
     }
 
-    
     setTimeout(() => {
         const simulatedResponse = { status: 409, data: "Duplicate entry detected" };
 
         if (simulatedResponse.status === 200) {
-            localStorage.setItem("trackingSentAt", now); 
+            localStorage.setItem("trackingSentAt", now);
         }
 
         responseFunction(simulatedResponse);
     }, 1000);
 }
 
-
 sendTrackingRequest();
 
+const apiUrl = "https://asia-southeast2-awan...omyid/api/tracker";
+const trackingData = { userId: "12345", action: "page_view" };
+
+// Fungsi untuk memeriksa respons HTTP
+function checkResponse(response) {
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response; // Mengembalikan response agar bisa digunakan selanjutnya
+}
+
+// Fungsi untuk mengirim tracking data
+async function sendTrackingData() {
+    try {
+        console.log("Mengirim data tracking...");
+        const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(trackingData),
+        });
+
+        checkResponse(response);
+
+        const data = await response.json();
+        console.log("Tracking data sent successfully:", data);
+    } catch (error) {
+        console.error("Error saat mengirim tracking:", error);
+    }
+}
+
+sendTrackingData();
