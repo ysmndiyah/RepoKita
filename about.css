@@ -49,7 +49,6 @@ body {
     color:  #00aaff;
 }
 
-
 .menu-toggle {
     font-size: 30px;
     color: #ffffff;
@@ -107,6 +106,43 @@ p {
     margin-top: 20px;
 }
 
+/* CSS untuk Pengalaman Organisasi */
+.organization-experience {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.organization-experience h2 {
+    font-size: 26px;
+    color: #ffaa00;
+    margin-bottom: 20px;
+}
+
+.org-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.org-gallery p {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.org-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.org-gallery img:hover {
+    transform: scale(1.1);
+}
+
 /* Responsiveness */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -127,5 +163,14 @@ p {
 
     .menu-toggle {
         display: block;
+    }
+
+    .org-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .org-gallery img {
+        width: 90%;
     }
 }
