@@ -1,55 +1,109 @@
-
-
+/* Reset beberapa gaya default browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #081b29;
+    background: #081b29;
+    color: #ededed;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 15px 10%;
+    background: rgba(8, 27, 41, 0.9);
+    color: white;
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ededed;
+}
+
+.navbar a {
+    color: #ededed;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
     width: 100%;
-    max-width: 400px;
+    height: 2px;
+    background-color: #00aaff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-h2 {
+.navbar a:hover::after,
+.navbar a.active::after {
+    transform: scaleX(1);
+}
+
+.feedback {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(8, 27, 41, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.feedback h2 {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
+    color: goldenrod;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     font-weight: bold;
-    display: block;
     margin-top: 10px;
+    color: #ededed;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #00aaff;
     border-radius: 5px;
+    background: #081b29;
+    color: #ededed;
 }
 
 button {
-    width: 100%;
+    margin-top: 20px;
     padding: 10px;
-    background: #28a745;
-    color: white;
+    background: goldenrod;
+    color: #081b29;
     border: none;
-    border-radius: 5px;
-    margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #218838;
+    background-color: orange;
 }
