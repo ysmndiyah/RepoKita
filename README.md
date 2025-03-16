@@ -1,39 +1,62 @@
- //Responsive Personal Branding Website
+# 🚀 Personal Website
 
-Deskripsi
-Proyek ini adalah sebuah situs web personal branding yang responsif, dirancang untuk menampilkan informasi tentang seorang Mahasiswa IT. Situs ini memiliki tata letak yang modern, animasi yang halus, serta navigasi yang mudah diakses.
+Ini adalah proyek website personal yang dibuat untuk menampilkan informasi tentang saya, termasuk profil, proyek, keterampilan, dan formulir masukan dari pengguna.
 
-//Fitur Utama
-- **Header Navigasi Tetap**: Navigasi tetap di bagian atas dengan efek hover.
-- **Animasi Gambar**: Gambar profil memiliki efek mengambang.
-- **Desain Responsif**: Menyesuaikan dengan berbagai ukuran layar.
-- **Efek Hover & Interaksi**: Efek hover pada tombol dan ikon sosial media.
+## 🎯 Fitur
+- 🔹 **Navigasi responsif**
+- 🔹 **Halaman profil** dengan informasi pribadi
+- 🔹 **Halaman proyek** untuk menampilkan portofolio
+- 🔹 **Formulir pesan & saran**
+- 🔹 **Favicon & Animasi Halus**
 
-//Teknologi yang Digunakan
-- **HTML**: Struktur halaman.
-- **CSS**: Styling dan animasi.
-- **JavaScript (Opsional)**: Untuk menu navigasi mobile.
-
-//Struktur Folder
+## 📂 Struktur Folder
 ```
-/project-root
-│── index.html
-│── style.css
-│── script.js (opsional)
+/project-folder
+│── index.html           # Halaman utama
+│── about.html           # Halaman About
+│── project.html         # Halaman Proyek
+│── skills.html          # Halaman Keterampilan
+│── colom.html           # Halaman Ratings
+│── css/
+│   │── style.css        # Styling utama
 │── assets/
-│   ├── images/
-│   ├── icons/
-│── README.md
+│   │── favicon.ico      # Favicon website
+│   │── images/          # Folder gambar
+│── README.md            # Dokumentasi proyek
 ```
 
- Cara Menggunakan
-1. Clone repositori atau unduh file ZIP.
-2. Buka `index.html` di browser.
-3. Jika ingin mengedit tampilan, ubah file `style.css`.
+## ⚙️ Cara Menjalankan
+1. **Clone repositori**
+   ```sh
+   git clone https://github.com/username/repository.git
+   ```
+2. **Masuk ke folder proyek**
+   ```sh
+   cd project-folder
+   ```
+3. **Buka file `index.html` di browser**
 
-## Kontribusi
-Jika Anda ingin berkontribusi, silakan buat pull request atau ajukan issue.
+## ✉️ Formulir Pesan & Saran
+- Formulir di halaman `colom.html` memungkinkan pengguna untuk mengirimkan pesan & saran.
+- Implementasi pengiriman email dapat menggunakan PHP atau layanan pihak ketiga seperti **Formspree**.
 
-## Lisensi
-Proyek ini tersedia di bawah lisensi MIT.
+## 🌟 Teknologi yang Digunakan
+- **HTML5**
+- **CSS3** (dengan animasi & responsivitas)
+- **JavaScript (opsional)** untuk interaktivitas
 
+## 🎨 Tampilan Warna & Desain
+- Warna utama: **#081b29** (Latar belakang)
+- Warna sekunder: **#ededed** (Teks utama)
+- Efek hover & animasi halus untuk pengalaman pengguna yang lebih baik.
+
+## 📌 Catatan
+Pastikan favicon muncul dengan menambahkan tag berikut di `<head>`:
+```html
+
+
+## 📧 Kontak
+Jika ada pertanyaan atau saran, silakan hubungi saya melalui email atau WhatsApp di halaman Contact.
+
+---
+💡 *Dibuat dengan ❤️ oleh [Yasmin]*
