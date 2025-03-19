@@ -20,6 +20,7 @@ body {
     padding: 15px 10%;
     background: rgba(8, 27, 41, 0.9);
     color: white;
+    position: relative;
 }
 
 .logo {
@@ -29,10 +30,15 @@ body {
     color: #ededed;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .navbar a {
     color: #ededed;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 18px;
     position: relative;
     transition: color 0.3s ease-in-out;
@@ -53,6 +59,49 @@ body {
 .navbar a:hover::after,
 .navbar a.active::after {
     transform: scaleX(1);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #ededed;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 5%;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        background: rgba(8, 27, 41, 0.95);
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    }
+    
+    .navbar.active {
+        display: flex;
+    }
+    
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+    }
 }
 
 .feedback {
@@ -106,48 +155,4 @@ button {
 
 button:hover {
     background-color: orange;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
-    
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-        font-size: 16px;
-    }
-
-    .feedback {
-        width: 90%;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-    }
-    
-    .navbar a {
-        font-size: 14px;
-    }
-    
-    .feedback {
-        width: 95%;
-        padding: 10px;
-    }
-    
-    button {
-        font-size: 14px;
-        padding: 8px;
-    }
 }
