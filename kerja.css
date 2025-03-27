@@ -1,4 +1,4 @@
-/* Styling Hero Section */
+
 .hero-section {
     background: linear-gradient(rgba(8, 27, 41, 0.9), rgba(8, 27, 41, 0.9)), url('https://source.unsplash.com/1600x600/?communication');
     background-size: cover;
@@ -8,12 +8,12 @@
     color: #081b29;
 }
 
-/* Navbar */
+
 .navbar {
     background: #081b29 !important;
 }
 
-/* Skill Cards */
+
 .skill-card {
     background: #112a38;
     border: 2px solid goldenrod;
@@ -29,7 +29,7 @@
     box-shadow: 0 4px 15px rgba(0, 170, 255, 0.5);
 }
 
-/* Skill Icons */
+
 .skill-icon {
     font-size: 40px;
     color: #00aaff;
