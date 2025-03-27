@@ -1,3 +1,4 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +6,17 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 }
 
+/* Body styling */
 body {
     background-color: #081b29;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Header styling */
 .header {
     position: fixed;
     top: 0;
@@ -24,6 +31,7 @@ body {
     z-index: 1000;
 }
 
+/* Logo styling */
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -31,6 +39,7 @@ body {
     text-decoration: none;
 }
 
+/* Navbar styling */
 .navbar {
     display: flex;
     gap: 20px;
@@ -49,25 +58,15 @@ body {
     color: #00aaff;
 }
 
+/* Menu toggle for mobile */
 .menu-toggle {
     font-size: 30px;
     color: #b0a43c;
-    display: none; 
+    display: none;
     cursor: pointer;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #081b29;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
+/* Container styling */
 .container {
     width: 80%;
     max-width: 800px;
@@ -77,14 +76,16 @@ body {
     gap: 15px;
 }
 
+/* Skill container */
 .skill-container {
     display: flex;
     gap: 20px;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px; 
+    max-width: 1200px;
 }
 
+/* Skill card */
 .skill-card {
     background: rgb(134, 134, 192);
     padding: 15px 20px;
@@ -95,6 +96,7 @@ body {
     font-weight: bold;
     color: #333;
     min-width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
@@ -102,6 +104,7 @@ body {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Skill card button */
 .skill-card a {
     display: inline-block;
     margin-top: 10px;
@@ -110,13 +113,14 @@ body {
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .skill-card a:hover {
     background-color: #0056b3;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     .navbar {
         display: none;
@@ -141,10 +145,10 @@ body {
     }
 
     .skill-card {
-        width: 90%; 
+        width: 90%;
     }
 
     .menu-toggle {
-        display: block; 
+        display: block;
     }
 }

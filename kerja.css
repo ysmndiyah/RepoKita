@@ -1,0 +1,42 @@
+/* Styling Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(8, 27, 41, 0.9), rgba(8, 27, 41, 0.9)), url('https://source.unsplash.com/1600x600/?communication');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #081b29;
+}
+
+/* Navbar */
+.navbar {
+    background: #081b29 !important;
+}
+
+/* Skill Cards */
+.skill-card {
+    background: #112a38;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #081b29;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.5);
+}
+
+/* Skill Icons */
+.skill-icon {
+    font-size: 40px;
+    color: #00aaff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.skill-icon:hover {
+    color: goldenrod;
+}
