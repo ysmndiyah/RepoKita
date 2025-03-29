@@ -35,36 +35,20 @@
         <h2>Pengalaman Organisasi</h2>
         <div class="org-gallery">
             <p>Grand Final Duta Kampus ULBI 2024</p>
-            <img src="image/abt1.jpg" alt="Pengalaman Organisasi 1">
+            <img src="image/abt1.jpg" alt="Pengalaman Organisasi 1" onclick="openModal(this)">
             <p>Duta Kampus Intelegensia ULBI 2024</p>
-            <img src="image/dw34.jpg" alt="Pengalaman Organisasi 2">
+            <img src="image/dw34.jpg" alt="Pengalaman Organisasi 2" onclick="openModal(this)">
             <p>Morris IF'24</p>
-            <img src="image/trbk.jpg" alt="Pengalaman Organisasi 3">
+            <img src="image/trbk.jpg" alt="Pengalaman Organisasi 3" onclick="openModal(this)">
         </div>
     </section>
+
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const text = "Al Yasmin Assa'diyah";
-            const typingElement = document.querySelector(".typing-effect");
-            let index = 0;
-            
-            function typeText() {
-                if (index < text.length) {
-                    typingElement.textContent += text.charAt(index);
-                    index++;
-                    setTimeout(typeText, 100);
-                }
-            }
-            typeText();
-            
-            const menuToggle = document.getElementById("menu-toggle");
-            const navbar = document.getElementById("navbar");
-            
-            menuToggle.addEventListener("click", function () {
-                navbar.classList.toggle("active");
-            });
-        });
-    </script>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modalImg">
+    </div>
+
+    <script src="about.js"></script> 
 </body>
 </html>
