@@ -6,7 +6,7 @@ Ini adalah proyek website personal yang dibuat untuk menampilkan informasi tenta
 - 🔹 **Navigasi responsif**
 - 🔹 **Halaman profil** dengan informasi pribadi
 - 🔹 **Halaman proyek** untuk menampilkan portofolio
-- 🔹 **Formulir pesan & saran**
+- 🔹 **Gallery**
 - 🔹 **Favicon & Animasi Halus**
 
 ## 📂 Struktur Folder
