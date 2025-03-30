@@ -36,9 +36,6 @@ Ini adalah proyek website personal yang dibuat untuk menampilkan informasi tenta
    ```
 3. **Buka file `index.html` di browser**
 
-## ✉️ Formulir Pesan & Saran
-- Formulir di halaman `colom.html` memungkinkan pengguna untuk mengirimkan pesan & saran.
-- Implementasi pengiriman email dapat menggunakan PHP atau layanan pihak ketiga seperti **Formspree**.
 
 ## 🌟 Teknologi yang Digunakan
 - **HTML5**
@@ -54,9 +51,6 @@ Ini adalah proyek website personal yang dibuat untuk menampilkan informasi tenta
 Pastikan favicon muncul dengan menambahkan tag berikut di `<head>`:
 ```html
 
-
-## 📧 Kontak
-Jika ada pertanyaan atau saran, silakan hubungi saya melalui email atau WhatsApp di halaman Contact.
 
 ---
 💡 *Dibuat dengan ❤️ oleh [Yasmin]*

@@ -1,6 +1,6 @@
 
         document.addEventListener("DOMContentLoaded", function () {
-            const text = "Perkenalkan, nama saya 'Al Yasmin Assa'diyah', biasa dipanggil Mimin.";
+            const text = "Al Yasmin Assa'diyah";
             const typingElement = document.querySelector(".typing-effect");
             let index = 0;
             
