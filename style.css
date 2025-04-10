@@ -353,5 +353,14 @@ body {
     }
 }
 
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    font-size: 14px;
+    color: #FFFF;
+    margin-top: 50px;
+}
+
 
 
